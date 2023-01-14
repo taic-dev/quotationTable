@@ -15,25 +15,8 @@ body{
     display: flex;
 }
 
-.main-textarea{
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 15px;
-}
 
-.main-textarea input {
-    width: 300px;
-}
 
-.main-item__left{
-    width: 55%;
-    margin: 30px 15px;
-}
-
-.main-item__right{
-    width: 45%;
-    margin: 30px 15px;
-}
 
 .main-quote-table{
     margin-bottom: 100px;
