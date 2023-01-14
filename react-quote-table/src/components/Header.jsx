@@ -28,7 +28,7 @@ const Header = () => {
             <Route exact path="/">
                 <Main setAllInfo={setAllInfo} totalPrice={totalPrice} setTotalPrice={setTotalPrice}></Main>
             </Route>
-            <Route exact path="/pdf">
+            <Route exact path="/pdf" style={{ color: "red", textDecoration: "none" }}>
                 <Pdf allInfo={allInfo} totalPrice={totalPrice}></Pdf>
             </Route>
         </Switch>

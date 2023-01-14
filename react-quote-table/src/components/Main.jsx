@@ -1,4 +1,3 @@
-import { Document, Page, Text, View, StyleSheet, PDFViewer } from "@react-pdf/renderer";
 import { Typography, } from '@mui/material';
 import { Container } from '@mui/system';
 import MainItemLeft from './MainItemLeft';

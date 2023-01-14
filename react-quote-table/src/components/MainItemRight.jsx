@@ -8,7 +8,7 @@ const MainItemRight = () => {
         <TextField id="outlined-required" label="見積もりNo." variant="standard" />
         </div>
         <div className="main-textarea">
-        <TextField id="outlined-required" label="見積も日" variant="standard" />
+        <TextField id="outlined-required" label="見積もり日" variant="standard" />
         </div>
         <div className="main-textarea">
         <TextField id="outlined-required" label="自社名" variant="standard" />
