@@ -1,5 +1,6 @@
 import { Typography, } from '@mui/material';
 import { Container } from '@mui/system';
+import MainWrapper from './organisms/MainWrapper'
 import MainItemLeft from './MainItemLeft';
 import MainItemRight from './MainItemRight';
 import MainItemQuoteTable from './MainItemQuoteTable';
@@ -66,18 +67,19 @@ function Main({ setAllInfo, totalPrice, setTotalPrice }) {
   return (
     <Container>
         <main className="main">
-        <Typography style={{fontSize: "25px",textAlign: "center"}} component="h2" variant="h2">お見積書</Typography>
-        <div className="main-wrapper">
+          <Typography style={{fontSize: "25px",textAlign: "center"}} component="h2" variant="h2">お見積書</Typography>
+          <MainWrapper>
             <MainItemLeft />
             <MainItemRight />
-        </div>
-        <MainItemQuoteTable 
-            changeTableCell={changeTableCell}
-            addTableRow={addTableRow}
-            deleteTableRow={deleteTableRow}
-            totalPrice={totalPrice}
-            allTableRow={allTableRow}
-        />
+          </MainWrapper>
+
+          <MainItemQuoteTable 
+              changeTableCell={changeTableCell}
+              addTableRow={addTableRow}
+              deleteTableRow={deleteTableRow}
+              totalPrice={totalPrice}
+              allTableRow={allTableRow}
+          />
         </main>
     </Container>
   );
