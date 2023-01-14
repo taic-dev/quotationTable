@@ -1,0 +1,9 @@
+.main-textarea{
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 15px;
+}
+
+.main-textarea input {
+    width: 300px;
+}

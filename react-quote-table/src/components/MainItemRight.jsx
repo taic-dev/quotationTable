@@ -1,36 +1,18 @@
 import React from 'react'
-import { TextField, Toolbar, Typography, } from '@mui/material';
+import TextField from "./atoms/TextFileld";
 
 const MainItemRight = () => {
   return (
     <div className="main-item main-item__right">
-        <div className="main-textarea">
-        <TextField id="outlined-required" label="見積もりNo." variant="standard" />
-        </div>
-        <div className="main-textarea">
-        <TextField id="outlined-required" label="見積もり日" variant="standard" />
-        </div>
-        <div className="main-textarea">
-        <TextField id="outlined-required" label="自社名" variant="standard" />
-        </div>
-        <div className="main-textarea">
-        <TextField id="outlined-required" label="〒" variant="standard" />
-        </div>
-        <div className="main-textarea">
-        <TextField id="outlined-required" label="住所" variant="standard" />
-        </div>
-        <div className="main-textarea">
-        <TextField id="outlined-required" label="電話番号" variant="standard" />
-        </div>
-        <div className="main-textarea">
-        <TextField id="outlined-required" label="FAX" variant="standard" />
-        </div>
-        <div className="main-textarea">
-        <TextField id="outlined-required" label="E-mail" variant="standard" />
-        </div>
-        <div className="main-textarea">
-        <TextField id="outlined-required" label="担当" variant="standard" />
-        </div>
+        <TextField labelName="見積もりNo." />
+        <TextField labelName="見積もり日" />
+        <TextField labelName="自社名" />
+        <TextField labelName="〒" />
+        <TextField labelName="住所" />
+        <TextField labelName="電話番号" />
+        <TextField labelName="FAX" />
+        <TextField labelName="E-mail" />
+        <TextField labelName="担当" />
     </div>
   )
 }
