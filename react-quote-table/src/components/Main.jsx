@@ -1,8 +1,8 @@
 import { Typography, } from '@mui/material';
 import { Container } from '@mui/system';
 import MainWrapper from './organisms/MainWrapper'
-import MainItemLeft from './MainItemLeft';
-import MainItemRight from './MainItemRight';
+import MainLeft from '../components/molecules/MainLeft'
+import MainRight from '../components/molecules/MainRight';
 import MainItemQuoteTable from './MainItemQuoteTable';
 import { useEffect, useState } from 'react';
 import '../App.css';
@@ -69,8 +69,8 @@ function Main({ setAllInfo, totalPrice, setTotalPrice }) {
         <main className="main">
           <Typography style={{fontSize: "25px",textAlign: "center"}} component="h2" variant="h2">お見積書</Typography>
           <MainWrapper>
-            <MainItemLeft />
-            <MainItemRight />
+            <MainLeft />
+            <MainRight />
           </MainWrapper>
 
           <MainItemQuoteTable 

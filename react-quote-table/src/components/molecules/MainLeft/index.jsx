@@ -1,8 +1,8 @@
-import React from "react";
-import TextField from "./atoms/TextFileld";
-import MainField from "./molecules/MainField";
+import React from 'react'
+import MainField from '../MainField'
+import TextField from '../../atoms/TextFileld'
 
-const MainItemLeft = () => {
+const index = () => {
   return (
     <MainField>
       <TextField labelName="会社名" text="御中" />
@@ -13,7 +13,7 @@ const MainItemLeft = () => {
       <TextField labelName="支払い条件" />
       <TextField labelName="有効期限" />
     </MainField>
-  );
-};
+  )
+}
 
-export default MainItemLeft;
+export default index
