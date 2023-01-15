@@ -1,12 +1,7 @@
-import Header from "./components/Header";
-import './App.css';
+import Route from "./components/pages/Route/Page";
 
 function App() {
-  return (
-    <>
-      <Header />
-    </>
-  )
+  return <Route />;
 }
 
 export default App;
