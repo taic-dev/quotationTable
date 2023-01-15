@@ -1,7 +1,7 @@
 import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import { Toolbar, Typography, Button, Box, AppBar } from '@mui/material'
 import PictureAsPdfIcon from '@mui/icons-material/PictureAsPdf';
-import Main from './Main'
+import Main from './organisms/Main'
 import Pdf from './Pdf'
 import React, { useState } from 'react'
 

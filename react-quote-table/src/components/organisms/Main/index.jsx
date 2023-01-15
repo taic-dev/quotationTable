@@ -1,11 +1,11 @@
+import { useEffect, useState } from 'react';
 import { Typography, } from '@mui/material';
 import { Container } from '@mui/system';
-import MainWrapper from './organisms/MainWrapper'
-import MainLeft from '../components/molecules/MainLeft'
-import MainRight from '../components/molecules/MainRight';
-import MainItemQuoteTable from './MainItemQuoteTable';
-import { useEffect, useState } from 'react';
-import '../App.css';
+import MainWrapper from '../MainWrapper'
+import MainQuoteTable from '../MainQuoteTable';
+import MainLeft from '../../molecules/MainLeft'
+import MainRight from '../../molecules/MainRight';
+import styles from "./index.module.css";
 
 function Main({ setAllInfo, totalPrice, setTotalPrice }) {
   const [allTableRow,setAllTableRow] = useState([
@@ -65,13 +65,13 @@ function Main({ setAllInfo, totalPrice, setTotalPrice }) {
 
   return (
     <Container>
-        <main className="main">
+        <main className={ styles.main }>
           <Typography style={{fontSize: "25px",textAlign: "center"}} component="h2" variant="h2">お見積書</Typography>
           <MainWrapper>
             <MainLeft />
             <MainRight />
           </MainWrapper>
-          <MainItemQuoteTable 
+          <MainQuoteTable
               changeTableCell={changeTableCell}
               addTableRow={addTableRow}
               deleteTableRow={deleteTableRow}
