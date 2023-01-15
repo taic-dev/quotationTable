@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Main from "../../templates/Main";
+import Header from "../../organisms/Header";
 import Pdf from "../../Pdf";
 
 const Page = () => {
@@ -11,6 +12,7 @@ const Page = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
+          <Header />
           <Main
             setAllInfo={setAllInfo}
             totalPrice={totalPrice}
@@ -18,6 +20,7 @@ const Page = () => {
           ></Main>
         </Route>
         <Route exact path="/pdf">
+          <Header />
           <Pdf allInfo={allInfo} totalPrice={totalPrice}></Pdf>
         </Route>
       </Switch>

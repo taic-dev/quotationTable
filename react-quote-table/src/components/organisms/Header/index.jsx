@@ -1,10 +1,9 @@
-import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
-import { Toolbar, Typography, Button, Box, AppBar } from "@mui/material";
+import React from "react";
+import { Link } from "react-router-dom";
+import { Toolbar, Typography, Box, AppBar } from "@mui/material";
 import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 
-import React, { useState } from "react";
-
-const Header = () => {
+const index = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
@@ -20,7 +19,7 @@ const Header = () => {
         </Toolbar>
       </AppBar>
     </Box>
-  );
-};
+  )
+}
 
-export default Header;
+export default index
