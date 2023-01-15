@@ -7,7 +7,7 @@ import MainLeft from "../../molecules/MainLeft";
 import MainRight from "../../molecules/MainRight";
 import styles from "./index.module.css";
 
-function Main({ setAllInfo, totalPrice, setTotalPrice }) {
+const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
   const [allTableRow, setAllTableRow] = useState([
     {
       id: 0,
