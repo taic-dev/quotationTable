@@ -3,11 +3,12 @@ import {
   Table,
   TableBody,
   TableCell,
-  TableHead,
+
   TableRow,
 } from "@mui/material";
 import DoNotDisturbOnIcon from "@mui/icons-material/DoNotDisturbOn";
 import TextField from "./atoms/TextFileld";
+import TableHead from "./organisms/TableHead";
 import React from "react";
 
 const MainItemQuoteTable = ({
@@ -31,16 +32,7 @@ const MainItemQuoteTable = ({
       />
 
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
-        <TableHead>
-          <TableRow>
-            <TableCell>No.</TableCell>
-            <TableCell>作業内容</TableCell>
-            <TableCell>単価</TableCell>
-            <TableCell>数量</TableCell>
-            <TableCell>金額</TableCell>
-            <TableCell></TableCell>
-          </TableRow>
-        </TableHead>
+        <TableHead />
         <TableBody>
           {allTableRow.map((value) => {
             return (
