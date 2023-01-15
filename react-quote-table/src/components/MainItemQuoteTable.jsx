@@ -5,9 +5,9 @@ import {
   TableCell,
   TableHead,
   TableRow,
-  TextField,
 } from "@mui/material";
 import DoNotDisturbOnIcon from "@mui/icons-material/DoNotDisturbOn";
+import TextField from "./atoms/TextFileld";
 import React from "react";
 
 const MainItemQuoteTable = ({
@@ -19,15 +19,17 @@ const MainItemQuoteTable = ({
 }) => {
   return (
     <div className="main-quote-table">
-      <div className="main-textarea">
-        <TextField
-          id="standard-read-only-input"
-          label="合計金額"
-          variant="standard"
-          defaultValue="0"
-          value={totalPrice}
-        />
-      </div>
+      <TextField
+        options={[
+          {
+            text: "円",
+            labelName: "合計金額",
+            defaultvalue: "0",
+            value: totalPrice,
+          },
+        ]}
+      />
+
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
         <TableHead>
           <TableRow>
@@ -46,43 +48,45 @@ const MainItemQuoteTable = ({
                 <TableCell>{value.id + 1}</TableCell>
                 <TableCell>
                   <TextField
-                    onChange={changeTableCell}
-                    id="outlined-required"
-                    label="作業内容"
-                    variant="standard"
-                    name="content"
+                    options={[
+                      {
+                        labelName: "作業内容",
+                        name: "content",
+                        onChange: ()=>changeTableCell()
+                      },
+                    ]}
                   />
                 </TableCell>
                 <TableCell>
                   <TextField
-                    onChange={changeTableCell}
-                    id="standard-number"
-                    label="単価"
-                    defaultValue="0"
-                    type="number"
-                    name="unitPrice"
-                    variant="standard"
+                    options={[{
+                        labelName: "単価",
+                        defaultValue: "0",
+                        type: "number",
+                        name: "unitPrice",
+                        onChange: ()=>changeTableCell()
+                    }]}
                   />
                 </TableCell>
                 <TableCell>
                   <TextField
-                    onChange={changeTableCell}
-                    id="standard-number"
-                    label="数量"
-                    defaultValue="0"
-                    type="number"
-                    name="quantity"
-                    variant="standard"
+                    options={[{
+                        labelName: "数量",
+                        defaultValue: "0",
+                        type: "number",
+                        name: "quantity",
+                        onChange: ()=>changeTableCell()
+                    }]}
                   />
                 </TableCell>
                 <TableCell>
                   <TextField
-                    id="standard-read-only-input"
-                    label="金額"
-                    InputProps={{ readOnly: true }}
-                    variant="standard"
-                    name="price"
-                    value={value.price}
+                    options={[{
+                        labelName: "金額",
+                        InputProps: { readOnly: true },
+                        name: "price",
+                        value: value.price
+                    }]}
                   />
                 </TableCell>
                 <TableCell>

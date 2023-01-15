@@ -5,15 +5,15 @@ import TextField from "../../atoms/TextFileld";
 const index = () => {
   return (
     <MainField>
-      <TextField labelName="見積もりNo." />
-      <TextField labelName="見積もり日" />
-      <TextField labelName="自社名" />
-      <TextField labelName="〒" />
-      <TextField labelName="住所" />
-      <TextField labelName="電話番号" />
-      <TextField labelName="FAX" />
-      <TextField labelName="E-mail" />
-      <TextField labelName="担当" />
+      <TextField options={[{ labelName: "見積もりNo.", fullWidth: true }]} />
+      <TextField options={[{ labelName: "見積もり日", fullWidth: true  }]} />
+      <TextField options={[{ labelName: "自社名", fullWidth: true  }]} />
+      <TextField options={[{ labelName: "〒", fullWidth: true  }]} />
+      <TextField options={[{ labelName: "住所", fullWidth: true  }]} />
+      <TextField options={[{ labelName: "電話番号", fullWidth: true  }]} />
+      <TextField options={[{ labelName: "FAX", fullWidth: true  }]} />
+      <TextField options={[{ labelName: "E-mail", fullWidth: true  }]} />
+      <TextField options={[{ labelName: "担当", fullWidth: true  }]} />
     </MainField>
   );
 };

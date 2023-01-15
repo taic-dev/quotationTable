@@ -7,7 +7,6 @@ import MainItemQuoteTable from './MainItemQuoteTable';
 import { useEffect, useState } from 'react';
 import '../App.css';
 
-
 function Main({ setAllInfo, totalPrice, setTotalPrice }) {
   const [allTableRow,setAllTableRow] = useState([
     {
@@ -72,7 +71,6 @@ function Main({ setAllInfo, totalPrice, setTotalPrice }) {
             <MainLeft />
             <MainRight />
           </MainWrapper>
-
           <MainItemQuoteTable 
               changeTableCell={changeTableCell}
               addTableRow={addTableRow}
