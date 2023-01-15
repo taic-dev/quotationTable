@@ -3,6 +3,7 @@ import { Button, Table } from "@mui/material";
 import TextField from "./atoms/TextFileld";
 import TableHead from "./organisms/TableHead";
 import TableBody from "./organisms/TableBody";
+import MainButton from "./atoms/MainButton";
 import React from "react";
 
 const MainItemQuoteTable = ({
@@ -33,11 +34,7 @@ const MainItemQuoteTable = ({
           deleteTableRow={deleteTableRow}
         />
       </Table>
-      <div className="main-button">
-        <Button variant="outlined" onClick={addTableRow}>
-          追加
-        </Button>
-      </div>
+      <MainButton addTableRow={addTableRow} />
     </div>
   );
 };
