@@ -1,10 +1,10 @@
-import { Button, Table } from "@mui/material";
-
-import TextField from "./atoms/TextFileld";
+import React from "react";
+import MainQuateTable from "./organisms/MainQuoteTable"
 import TableHead from "./organisms/TableHead";
 import TableBody from "./organisms/TableBody";
+import TextField from "./atoms/TextFileld";
 import MainButton from "./atoms/MainButton";
-import React from "react";
+import { Table } from "@mui/material";
 
 const MainItemQuoteTable = ({
   changeTableCell,
@@ -14,7 +14,7 @@ const MainItemQuoteTable = ({
   allTableRow,
 }) => {
   return (
-    <div className="main-quote-table">
+    <MainQuateTable>
       <TextField
         options={[
           {
@@ -35,7 +35,7 @@ const MainItemQuoteTable = ({
         />
       </Table>
       <MainButton addTableRow={addTableRow} />
-    </div>
+    </MainQuateTable>
   );
 };
 
