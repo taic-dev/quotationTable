@@ -1,13 +1,9 @@
 import React from "react";
-import PdfTableHeader from "../../molecules/PdfTableHeader";
-import PdfTableRow from "../../molecules/PdfTableRow";
+import PdfTableWrapper from "../../organisms/PdfWrapper";
 
 import {
   Document,
   Page,
-  View,
-  Text,
-  StyleSheet,
   PDFViewer,
   Font,
 } from "@react-pdf/renderer";
@@ -22,45 +18,22 @@ Font.register({
   src: "./fonts/Nasu-Bold.ttf",
 });
 
-const styles = StyleSheet.create({
+const styles = {
   viewer: {
     width: window.innerWidth,
     height: window.innerHeight,
   },
-  wrapper: {
-    margin: "50px",
-  },
-  title: {
-    fontFamily: "Nasu-Bold",
-    fontWeight: "bold",
-    textAlign: "center",
-    marginBottom: "50px",
-  },
-  totalPrice: {
-    fontFamily: "Nasu-Bold",
-    borderBottom: "1px",
-    marginBottom: "50px",
-  },
-  table: {
-    width: "auto",
-  },
-});
+};
 
 const Pdf = ({ allInfo, totalPrice }) => {
   return (
     <PDFViewer style={styles.viewer}>
       <Document>
         <Page size="A4">
-          <View style={styles.wrapper}>
-            <Text style={styles.title}>お見積書</Text>
-            <Text style={styles.totalPrice}>合計金額：{totalPrice}円</Text>
-            <View style={styles.table}>
-              <PdfTableHeader />
-              {allInfo.map((value) => {
-                return <PdfTableRow value={value} />;
-              })}
-            </View>
-          </View>
+          <PdfTableWrapper
+            allInfo={allInfo}
+            totalPrice={totalPrice}
+          />
         </Page>
       </Document>
     </PDFViewer>

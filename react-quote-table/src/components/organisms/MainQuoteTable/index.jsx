@@ -1,6 +1,6 @@
 import React from "react";
-import TableHead from "../TableHead";
-import TableBody from "../TableBody";
+import TableHead from "../PdfTableHead";
+import TableBody from "../PdfTableBody";
 import TextField from "../../atoms/TextFileld";
 import MainButton from "../../atoms/MainButton";
 import { Table } from "@mui/material";
