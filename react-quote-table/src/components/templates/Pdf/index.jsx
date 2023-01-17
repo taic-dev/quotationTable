@@ -1,7 +1,6 @@
 import React from "react";
-
-import PdfTableHeader from "./molecules/PdfTableHeader";
-import PdfTableRow from "./molecules/PdfTableRow";
+import PdfTableHeader from "../../molecules/PdfTableHeader";
+import PdfTableRow from "../../molecules/PdfTableRow";
 
 import {
   Document,
@@ -45,7 +44,6 @@ const styles = StyleSheet.create({
   table: {
     width: "auto",
   },
-
 });
 
 const Pdf = ({ allInfo, totalPrice }) => {
@@ -59,9 +57,7 @@ const Pdf = ({ allInfo, totalPrice }) => {
             <View style={styles.table}>
               <PdfTableHeader />
               {allInfo.map((value) => {
-                return (
-                  <PdfTableRow value={value} />
-                );
+                return <PdfTableRow value={value} />;
               })}
             </View>
           </View>
