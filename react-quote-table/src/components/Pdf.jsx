@@ -1,3 +1,7 @@
+import React from "react";
+
+import PdfTableRow from "./molecules/PdfTableRow";
+
 import {
   Document,
   Page,
@@ -7,7 +11,6 @@ import {
   PDFViewer,
   Font,
 } from "@react-pdf/renderer";
-import React from "react";
 
 Font.register({
   family: "Nasu-Regular",
@@ -99,23 +102,7 @@ const Pdf = ({ allInfo, totalPrice }) => {
               </View>
               {allInfo.map((value) => {
                 return (
-                  <View style={styles.tableRow} key={value.id}>
-                    <View style={styles.tableColNo}>
-                      <Text style={styles.tableCell}>{value.id + 1}</Text>
-                    </View>
-                    <View style={styles.tableCol}>
-                      <Text style={styles.tableCell}>{value.content}</Text>
-                    </View>
-                    <View style={styles.tableCol}>
-                      <Text style={styles.tableCell}>{value.unitPrice}円</Text>
-                    </View>
-                    <View style={styles.tableCol}>
-                      <Text style={styles.tableCell}>{value.quantity}</Text>
-                    </View>
-                    <View style={styles.tableCol}>
-                      <Text style={styles.tableCell}>{value.price}円</Text>
-                    </View>
-                  </View>
+                  <PdfTableRow value={value} />
                 );
               })}
             </View>
