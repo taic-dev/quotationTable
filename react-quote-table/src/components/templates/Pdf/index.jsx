@@ -25,7 +25,7 @@ const styles = {
   },
 };
 
-const Pdf = ({ allInfo, totalPrice }) => {
+const index = ({ allInfo, totalPrice }) => {
   return (
     <PDFViewer style={styles.viewer}>
       <Document>
@@ -40,4 +40,4 @@ const Pdf = ({ allInfo, totalPrice }) => {
   );
 };
 
-export default Pdf;
+export default index;
