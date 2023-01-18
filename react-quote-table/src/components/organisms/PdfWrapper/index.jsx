@@ -1,27 +1,9 @@
-import { View, Text } from "@react-pdf/renderer";
 import React from "react";
 import PdfTableHeader from "../../molecules/PdfTableHeader";
 import PdfTableRow from "../../molecules/PdfTableRow";
+import { View, Text } from "@react-pdf/renderer";
+import styles from "./styles";
 
-const styles = {
-  wrapper: {
-    margin: "50px",
-  },
-  title: {
-    fontFamily: "Nasu-Bold",
-    fontWeight: "bold",
-    textAlign: "center",
-    marginBottom: "50px",
-  },
-  totalPrice: {
-    fontFamily: "Nasu-Bold",
-    borderBottom: "1px",
-    marginBottom: "50px",
-  },
-  table: {
-    width: "auto",
-  },
-};
 
 const index = ({ allInfo, totalPrice }) => {
   return (

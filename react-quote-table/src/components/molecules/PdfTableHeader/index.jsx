@@ -1,22 +1,8 @@
 import React from "react";
 import { View, Text } from "@react-pdf/renderer";
+import styles from "./styles"
 
-const styles = {
-  tableHeader: {
-    flexDirection: "row",
-    borderBottom: "1px",
-  },
-  tableHeaderColNo: {
-    width: "10%",
-  },
-  tableHeaderCol: {
-    width: "20%",
-  },
-  tableHeaderCell: {
-    fontSize: "13px",
-    fontFamily: "Nasu-Bold",
-  },
-};
+console.log(styles);
 
 const index = () => {
   return (
