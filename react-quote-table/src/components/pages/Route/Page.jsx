@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Main from "../../templates/Main";
 import Header from "../../organisms/Header";
-import Pdf from "../../Pdf";
+import Pdf from "../../templates/Pdf";
 
 const Page = () => {
   const [allInfo, setAllInfo] = useState([]);
@@ -17,11 +17,14 @@ const Page = () => {
             setAllInfo={setAllInfo}
             totalPrice={totalPrice}
             setTotalPrice={setTotalPrice}
-          ></Main>
+          />
         </Route>
         <Route exact path="/pdf">
           <Header />
-          <Pdf allInfo={allInfo} totalPrice={totalPrice}></Pdf>
+          <Pdf 
+            allInfo={allInfo}
+            totalPrice={totalPrice} 
+          />
         </Route>
       </Switch>
     </BrowserRouter>

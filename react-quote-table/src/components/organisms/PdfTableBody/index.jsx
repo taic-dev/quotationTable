@@ -1,7 +1,7 @@
-import { TableBody, TableCell, TableRow } from "@mui/material";
-import DoNotDisturbOnIcon from "@mui/icons-material/DoNotDisturbOn";
-import TextField from "../../atoms/TextFileld";
 import React from "react";
+import TextField from "../../atoms/TextFileld";
+import DoNotDisturbOnIcon from "@mui/icons-material/DoNotDisturbOn";
+import { TableBody, TableCell, TableRow } from "@mui/material";
 
 const index = ({ allTableRow, changeTableCell, deleteTableRow }) => {
   return (
