@@ -1,16 +1,20 @@
 import React from "react";
+import PdfDetailInfoLeft from "../../molecules/PdfDetailInfoLeft";
+import PdfDetailInfoRight from "../../molecules/PdfDetailInfoRight";
 import PdfTableHead from "../../molecules/PdfTableHead";
 import PdfTableRow from "../../molecules/PdfTableRow";
 import { View, Text } from "@react-pdf/renderer";
 import styles from "./styles";
 
-
 const index = ({ allInfo }) => {
   return (
     <View style={styles.wrapper}>
       <Text style={styles.title}>お見積書</Text>
-      <Text style={styles.totalPrice}>合計金額：{allInfo[2].totalPrice}円</Text>
-      <View style={styles.table}>
+      <View style={styles.detail}>
+        <PdfDetailInfoLeft allInfo={allInfo} />
+        <PdfDetailInfoRight allInfo={allInfo} />
+      </View>
+      <View>
         <PdfTableHead />
         {allInfo[1].map((value) => {
           return <PdfTableRow value={value} key={value.uuid} />;

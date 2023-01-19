@@ -1,7 +1,6 @@
 const styles = {
   tableHeader: {
     flexDirection: "row",
-    borderBottom: "1px",
   },
   tableHeaderColNo: {
     width: "10%",
@@ -10,8 +9,12 @@ const styles = {
     width: "20%",
   },
   tableHeaderCell: {
-    fontSize: "13px",
-    fontFamily: "Nasu-Bold",
+    width: "auto",
+    fontSize: "10px",
+    fontFamily: "Nasu-Regular",
+    color: "#fff",
+    backgroundColor: "#4169e1",
+    padding: "5px"
   },
 };
 

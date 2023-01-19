@@ -9,7 +9,7 @@ const styles = {
     width: "10%",
   },
   tableCell: {
-    fontSize: "12px",
+    fontSize: "10px",
     fontFamily: "Nasu-Regular",
     margin: "5px",
   },

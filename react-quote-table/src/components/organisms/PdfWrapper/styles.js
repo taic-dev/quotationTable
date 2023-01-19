@@ -6,15 +6,16 @@ const styles = {
     fontFamily: "Nasu-Bold",
     fontWeight: "bold",
     textAlign: "center",
-    marginBottom: "50px",
   },
   totalPrice: {
     fontFamily: "Nasu-Bold",
     borderBottom: "1px",
     marginBottom: "50px",
   },
-  table: {
-    width: "auto",
+  detail: {
+    width: "100%",
+    margin: "30px 0",
+    flexDirection: "row",
   },
 };
 
