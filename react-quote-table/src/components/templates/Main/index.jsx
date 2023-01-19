@@ -9,6 +9,15 @@ import { Container } from "@mui/system";
 import styles from "./index.module.css";
 
 const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
+  const [detailInfo, setDetailInfo] = useState({
+    company: "",
+    rep: "",
+    subject: "",
+    dueDate: "",
+    paymentCriteria: "",
+    expirationDate: "",
+  });
+
   const [allTableRow, setAllTableRow] = useState([
     {
       id: 0,
@@ -41,8 +50,8 @@ const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
           お見積書
         </Typography>
         <MainWrapper>
-          <MainLeft />
-          <MainRight />
+          <MainLeft detailInfo={detailInfo} setDetailInfo={setDetailInfo} />
+          <MainRight detailInfo={detailInfo} setDetailInfo={setDetailInfo} />
         </MainWrapper>
         <MainQuoteTable
           totalPrice={totalPrice}
@@ -52,6 +61,6 @@ const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
       </main>
     </Container>
   );
-}
+};
 
 export default Main;

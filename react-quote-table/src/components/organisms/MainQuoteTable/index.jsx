@@ -6,8 +6,7 @@ import AddButton from "../../atoms/AddButton";
 import { Table } from "@mui/material";
 import styles from "./index.module.css";
 
-const MainItemQuoteTable = ({
-  
+const MainQuoteTable = ({
   totalPrice,
   allTableRow,
   setAllTableRow
@@ -33,4 +32,4 @@ const MainItemQuoteTable = ({
   );
 };
 
-export default MainItemQuoteTable;
+export default MainQuoteTable;
