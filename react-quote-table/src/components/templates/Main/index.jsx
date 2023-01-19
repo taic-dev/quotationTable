@@ -16,6 +16,15 @@ const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
     dueDate: "",
     paymentCriteria: "",
     expirationDate: "",
+    no: "",
+    quoteDate: "",
+    ownCompany: "",
+    postalCode: "",
+    address: "",
+    phoneNumber: "",
+    fax: "",
+    email: "",
+    ownRep: "",
   });
 
   const [allTableRow, setAllTableRow] = useState([
