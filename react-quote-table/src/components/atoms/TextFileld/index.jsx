@@ -3,7 +3,6 @@ import { TextField } from "@mui/material";
 import styles from "./index.module.css";
 
 const index = ({ options }) => {
-  console.log(options)
 
   return (
     <div className={styles['main-textarea']}>
@@ -15,8 +14,8 @@ const index = ({ options }) => {
         defaultValue={ options[0].defaultValue && options[0].defaultValue }
         type={ options[0].type && options[0].type }
         name={ options[0].name && options[0].name }
-        onChange={ options[0].onChange && options[0].onChange }
         fullWidth={ options[0].fullWidth && true }
+        onChange={ options[0].onChange && options[0].onChange }
         />
       { options[0].text && <span>{ options[0].text }</span>}
     </div>
