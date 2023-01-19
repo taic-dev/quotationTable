@@ -8,7 +8,7 @@ import { Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import styles from "./index.module.css";
 
-const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
+const Main = ({ setAllInfo }) => {
   const [detailInfo, setDetailInfo] = useState({
     company: "",
     rep: "",
@@ -38,6 +38,8 @@ const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
     },
   ]);
 
+  const [totalPrice, setTotalPrice] = useState(0);
+
   useEffect(() => {
     setTotalPrice(
       allTableRow.reduce((sum, row) => {
@@ -45,8 +47,8 @@ const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
       }, 0)
     );
 
-    setAllInfo([...allTableRow]);
-  }, [allTableRow]);
+    setAllInfo([detailInfo, allTableRow, { totalPrice: totalPrice }]);
+  }, [allTableRow, detailInfo]);
 
   return (
     <Container>

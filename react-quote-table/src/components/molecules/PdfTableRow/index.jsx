@@ -4,7 +4,7 @@ import styles from "./styles.js"
 
 const PdfTableRow = ({ value }) => {
   return (
-    <View style={styles.tableRow} key={value.id}>
+    <View style={styles.tableRow}>
       <View style={styles.tableColNo}>
         <Text style={styles.tableCell}>{value.id + 1}</Text>
       </View>
