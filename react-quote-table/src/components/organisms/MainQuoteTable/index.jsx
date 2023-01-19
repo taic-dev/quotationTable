@@ -1,17 +1,16 @@
 import React from "react";
-import TableHead from "../PdfTableHead";
-import TableBody from "../PdfTableBody";
+import MainTableHead from "../MainTableHead";
+import MainTableBody from "../MainTableBody";
 import TextField from "../../atoms/TextFileld";
-import MainButton from "../../atoms/MainButton";
+import AddButton from "../../atoms/AddButton";
 import { Table } from "@mui/material";
 import styles from "./index.module.css";
 
 const MainItemQuoteTable = ({
-  changeTableCell,
-  addTableRow,
-  deleteTableRow,
+  
   totalPrice,
   allTableRow,
+  setAllTableRow
 }) => {
   return (
     <div className={styles["main-quote-table"]}>
@@ -26,14 +25,10 @@ const MainItemQuoteTable = ({
         ]}
       />
       <Table sx={{ minWidth: 700 }} aria-label="customized table">
-        <TableHead />
-        <TableBody
-          allTableRow={allTableRow}
-          changeTableCell={changeTableCell}
-          deleteTableRow={deleteTableRow}
-        />
+        <MainTableHead />
+        <MainTableBody allTableRow={allTableRow} setAllTableRow={setAllTableRow} />
       </Table>
-      <MainButton addTableRow={addTableRow} />
+      <AddButton allTableRow={allTableRow} setAllTableRow={setAllTableRow} />
     </div>
   );
 };

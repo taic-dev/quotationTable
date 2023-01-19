@@ -2,8 +2,6 @@ import React from "react";
 import { View, Text } from "@react-pdf/renderer";
 import styles from "./styles"
 
-console.log(styles);
-
 const index = () => {
   return (
     <View style={styles.tableHeader}>

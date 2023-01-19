@@ -9,7 +9,7 @@ const PdfTableRow = ({ value }) => {
         <Text style={styles.tableCell}>{value.id + 1}</Text>
       </View>
       <View style={styles.tableCol}>
-        <Text style={styles.tableCell}>{value.content}</Text>
+        <Text style={styles.tableCell}>{value.workDetail}</Text>
       </View>
       <View style={styles.tableCol}>
         <Text style={styles.tableCell}>{value.unitPrice}円</Text>

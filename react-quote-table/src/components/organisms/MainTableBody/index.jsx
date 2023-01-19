@@ -1,9 +1,22 @@
 import React from "react";
 import TextField from "../../atoms/TextFileld";
-import DoNotDisturbOnIcon from "@mui/icons-material/DoNotDisturbOn";
+import AddButton from "../../atoms/DeleteButton";
 import { TableBody, TableCell, TableRow } from "@mui/material";
 
-const index = ({ allTableRow, changeTableCell, deleteTableRow }) => {
+const MainTableBody = ({ allTableRow, setAllTableRow }) => {
+  // セルに変更が加えられたら
+  const changeTableCell = (e) => {
+    const { name, value } = e.target;
+    const parentId = e.target.closest("tr").id;
+
+    setAllTableRow(
+      [...allTableRow],
+      (allTableRow[parentId][name] = value),
+      (allTableRow[parentId].price =
+        allTableRow[parentId].unitPrice * allTableRow[parentId].quantity)
+    );
+  };
+
   return (
     <TableBody>
       {allTableRow.map((value) => {
@@ -15,8 +28,8 @@ const index = ({ allTableRow, changeTableCell, deleteTableRow }) => {
                 options={[
                   {
                     labelName: "作業内容",
-                    name: "content",
-                    onChange: () => changeTableCell(),
+                    name: "workDetail",
+                    onChange: (e) => changeTableCell(e),
                   },
                 ]}
               />
@@ -29,7 +42,7 @@ const index = ({ allTableRow, changeTableCell, deleteTableRow }) => {
                     defaultValue: "0",
                     type: "number",
                     name: "unitPrice",
-                    onChange: () => changeTableCell(),
+                    onChange: (e) => changeTableCell(e),
                   },
                 ]}
               />
@@ -42,7 +55,7 @@ const index = ({ allTableRow, changeTableCell, deleteTableRow }) => {
                     defaultValue: "0",
                     type: "number",
                     name: "quantity",
-                    onChange: () => changeTableCell(),
+                    onChange: (e) => changeTableCell(e),
                   },
                 ]}
               />
@@ -60,7 +73,10 @@ const index = ({ allTableRow, changeTableCell, deleteTableRow }) => {
               />
             </TableCell>
             <TableCell>
-              <DoNotDisturbOnIcon onClick={deleteTableRow}></DoNotDisturbOnIcon>
+              <AddButton
+                allTableRow={allTableRow}
+                setAllTableRow={setAllTableRow}
+              />
             </TableCell>
           </TableRow>
         );
@@ -69,4 +85,4 @@ const index = ({ allTableRow, changeTableCell, deleteTableRow }) => {
   );
 };
 
-export default index;
+export default MainTableBody;
