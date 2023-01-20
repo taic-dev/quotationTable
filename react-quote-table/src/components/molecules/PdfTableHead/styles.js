@@ -3,18 +3,17 @@ const styles = {
     flexDirection: "row",
   },
   tableHeaderColNo: {
-    width: "10%",
+    width: "4%",
   },
   tableHeaderCol: {
-    width: "20%",
+    width: "24%",
   },
   tableHeaderCell: {
-    width: "auto",
+    padding: "5px",
     fontSize: "10px",
     fontFamily: "Nasu-Regular",
     color: "#fff",
     backgroundColor: "#4169e1",
-    padding: "5px"
   },
 };
 

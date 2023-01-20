@@ -1,9 +1,9 @@
 const styles = {
   detailLeft: {
-    width: "65%",
+    width: "60%",
     fontSize: "13px",
     fontFamily: "Nasu-Regular",
-    paddingRight: "50px"
+    paddingRight: "20px"
   },
   detailItem: {
     fontFamily: "Nasu-Bold",
