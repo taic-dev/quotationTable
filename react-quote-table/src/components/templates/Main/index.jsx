@@ -8,7 +8,25 @@ import { Typography } from "@mui/material";
 import { Container } from "@mui/system";
 import styles from "./index.module.css";
 
-const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
+const Main = ({ setAllInfo }) => {
+  const [detailInfo, setDetailInfo] = useState({
+    company: "",
+    postalCode: "",
+    address: "",
+    rep: "",
+    subject: "",
+    dueDate: "",
+    no: "",
+    quoteDate: "",
+    ownCompany: "",
+    ownPostalCode: "",
+    ownAddress: "",
+    ownPhoneNumber: "",
+    ownFax: "",
+    ownEmail: "",
+    ownRep: "",
+  });
+
   const [allTableRow, setAllTableRow] = useState([
     {
       id: 0,
@@ -20,6 +38,8 @@ const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
     },
   ]);
 
+  const [totalPrice, setTotalPrice] = useState(0);
+
   useEffect(() => {
     setTotalPrice(
       allTableRow.reduce((sum, row) => {
@@ -27,8 +47,8 @@ const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
       }, 0)
     );
 
-    setAllInfo([...allTableRow]);
-  }, [allTableRow]);
+    setAllInfo([detailInfo, allTableRow, { totalPrice: totalPrice }]);
+  }, [allTableRow, detailInfo]);
 
   return (
     <Container>
@@ -41,8 +61,8 @@ const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
           お見積書
         </Typography>
         <MainWrapper>
-          <MainLeft />
-          <MainRight />
+          <MainLeft detailInfo={detailInfo} setDetailInfo={setDetailInfo} />
+          <MainRight detailInfo={detailInfo} setDetailInfo={setDetailInfo} />
         </MainWrapper>
         <MainQuoteTable
           totalPrice={totalPrice}
@@ -52,6 +72,6 @@ const Main = ({ setAllInfo, totalPrice, setTotalPrice }) => {
       </main>
     </Container>
   );
-}
+};
 
 export default Main;

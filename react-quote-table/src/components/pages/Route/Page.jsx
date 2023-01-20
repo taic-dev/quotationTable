@@ -6,7 +6,8 @@ import Pdf from "../../templates/Pdf";
 
 const Page = () => {
   const [allInfo, setAllInfo] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
+
+  console.log(allInfo)
 
   return (
     <BrowserRouter>
@@ -15,15 +16,12 @@ const Page = () => {
           <Header />
           <Main
             setAllInfo={setAllInfo}
-            totalPrice={totalPrice}
-            setTotalPrice={setTotalPrice}
           />
         </Route>
         <Route exact path="/pdf">
           <Header />
           <Pdf 
             allInfo={allInfo}
-            totalPrice={totalPrice} 
           />
         </Route>
       </Switch>

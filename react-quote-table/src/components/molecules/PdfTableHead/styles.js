@@ -1,17 +1,19 @@
 const styles = {
   tableHeader: {
     flexDirection: "row",
-    borderBottom: "1px",
   },
   tableHeaderColNo: {
-    width: "10%",
+    width: "4%",
   },
   tableHeaderCol: {
-    width: "20%",
+    width: "24%",
   },
   tableHeaderCell: {
-    fontSize: "13px",
-    fontFamily: "Nasu-Bold",
+    padding: "5px",
+    fontSize: "10px",
+    fontFamily: "Nasu-Regular",
+    color: "#fff",
+    backgroundColor: "#4169e1",
   },
 };
 

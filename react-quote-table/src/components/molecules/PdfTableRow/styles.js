@@ -1,15 +1,18 @@
 const styles = {
   tableRow: {
     flexDirection: "row",
-  },
-  tableCol: {
-    width: "20%",
+    backgroundColor: "#f5f5f5",
+    borderBottom: "1px solid #4169e1",
   },
   tableColNo: {
-    width: "10%",
+    width: "4%",
+  },
+  tableCol: {
+    width: "24%",
+    wordWrap: "break-word"
   },
   tableCell: {
-    fontSize: "12px",
+    fontSize: "10px",
     fontFamily: "Nasu-Regular",
     margin: "5px",
   },
