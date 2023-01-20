@@ -16,6 +16,9 @@ const styles = {
     borderBottom: "2px solid #4169e1",
     fontFamily: "Nasu-Bold",
   },
+  detailQuote: {
+    marginTop: "10px",
+  },
   detailTotalPrice: {
     width: "80%",
     flexDirection: "row",

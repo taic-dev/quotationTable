@@ -11,19 +11,19 @@ import styles from "./index.module.css";
 const Main = ({ setAllInfo }) => {
   const [detailInfo, setDetailInfo] = useState({
     company: "",
+    postalCode: "",
+    address: "",
     rep: "",
     subject: "",
     dueDate: "",
-    paymentCriteria: "",
-    expirationDate: "",
     no: "",
     quoteDate: "",
     ownCompany: "",
-    postalCode: "",
-    address: "",
-    phoneNumber: "",
-    fax: "",
-    email: "",
+    ownPostalCode: "",
+    ownAddress: "",
+    ownPhoneNumber: "",
+    ownFax: "",
+    ownEmail: "",
     ownRep: "",
   });
 

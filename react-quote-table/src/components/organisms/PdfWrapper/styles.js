@@ -6,6 +6,9 @@ const styles = {
     fontFamily: "Nasu-Bold",
     fontWeight: "bold",
     textAlign: "center",
+    padding: "5px 0",
+    color: "#fff",
+    backgroundColor: "#4169e1",
   },
   totalPrice: {
     fontFamily: "Nasu-Bold",

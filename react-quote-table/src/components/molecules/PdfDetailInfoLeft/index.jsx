@@ -19,6 +19,9 @@ const index = ({ allInfo }) => {
         <Text style={styles.detailTextSmall}>{allInfo[0].rep}様</Text>
       </View>
       <View style={styles.detailMarginTop}>
+        <Text style={styles.detailCompanyText}>{allInfo[0].subject}</Text>
+      </View>
+      <View style={styles.detailQuote}>
         <Text style={styles.detailTextSmall}>下記の通りお見積りを申し上げます。</Text>
         <View style={styles.detailTotalPrice}>
           <Text style={styles.detailTotalPriceText}>見積もり金額</Text>
