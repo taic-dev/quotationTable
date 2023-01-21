@@ -3,6 +3,7 @@ import MainWrapper from "../../organisms/MainWrapper";
 import MainQuoteTable from "../../organisms/MainQuoteTable";
 import MainLeft from "../../molecules/MainLeft";
 import MainRight from "../../molecules/MainRight";
+import SidebarWrapper from "../../organisms/SidebarWrapper";
 import { uuid } from "../../../utils/uuid";
 import { Typography } from "@mui/material";
 import styles from "./index.module.css";
@@ -70,7 +71,7 @@ const Main = ({ setAllInfo }) => {
         />
       </main>
       <div className={styles.sidebar}>
-        <p>テキストテキストテキストテキスト</p>
+        <SidebarWrapper />
       </div>
     </div>
   );
