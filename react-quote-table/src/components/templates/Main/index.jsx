@@ -5,7 +5,6 @@ import MainLeft from "../../molecules/MainLeft";
 import MainRight from "../../molecules/MainRight";
 import { uuid } from "../../../utils/uuid";
 import { Typography } from "@mui/material";
-import { Container } from "@mui/system";
 import styles from "./index.module.css";
 
 const Main = ({ setAllInfo }) => {
@@ -51,7 +50,7 @@ const Main = ({ setAllInfo }) => {
   }, [allTableRow, detailInfo]);
 
   return (
-    <Container>
+    <div className={styles.wrapper}>
       <main className={styles.main}>
         <Typography
           style={{ fontSize: "25px", textAlign: "center" }}
@@ -70,7 +69,10 @@ const Main = ({ setAllInfo }) => {
           setAllTableRow={setAllTableRow}
         />
       </main>
-    </Container>
+      <div className={styles.sidebar}>
+        <p>テキストテキストテキストテキスト</p>
+      </div>
+    </div>
   );
 };
 
