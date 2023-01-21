@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import MainWrapper from "../../organisms/MainWrapper";
 import MainQuoteTable from "../../organisms/MainQuoteTable";
+import SidebarWrapper from "../../organisms/SidebarWrapper";
 import MainLeft from "../../molecules/MainLeft";
 import MainRight from "../../molecules/MainRight";
-import SidebarWrapper from "../../organisms/SidebarWrapper";
+import Headline from "../../atoms/Headline";
 import { uuid } from "../../../utils/uuid";
-import { Typography } from "@mui/material";
 import styles from "./index.module.css";
 
 const Main = ({ setAllInfo }) => {
@@ -53,13 +53,7 @@ const Main = ({ setAllInfo }) => {
   return (
     <div className={styles.wrapper}>
       <main className={styles.main}>
-        <Typography
-          style={{ fontSize: "25px", textAlign: "center" }}
-          component="h2"
-          variant="h2"
-        >
-          お見積書
-        </Typography>
+        <Headline>見積書</Headline>
         <MainWrapper>
           <MainLeft detailInfo={detailInfo} setDetailInfo={setDetailInfo} />
           <MainRight detailInfo={detailInfo} setDetailInfo={setDetailInfo} />
@@ -71,6 +65,16 @@ const Main = ({ setAllInfo }) => {
         />
       </main>
       <div className={styles.sidebar}>
+        <Headline
+          color={{
+            color: "#fff",
+            background: "#4169e1",
+            fontWeight: "bold",
+            padding: "5px 0",
+          }}
+        >
+          お見積書
+        </Headline>
         <SidebarWrapper />
       </div>
     </div>

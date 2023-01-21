@@ -1,3 +1,4 @@
 .main-quote-table{
     margin-bottom: 100px;
+    overflow-x: scroll;
 }
