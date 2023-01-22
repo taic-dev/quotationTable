@@ -1,5 +1,7 @@
 .wrapper {
+  position: relative;
   display: flex;
+  justify-content: start;
   gap: 60px;
   margin: 100px 15px;
 }
@@ -9,7 +11,11 @@
 }
 
 .sidebar {
-  width: 55%;
+  position: sticky;
+  top: 30px;
+  right: 0;
+
+  width: 45%;
   height: fit-content;
   margin-left: 15px;
   padding: 30px;
