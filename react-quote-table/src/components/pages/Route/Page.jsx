@@ -15,6 +15,7 @@ const Page = () => {
         <Route exact path="/">
           <Header />
           <Main
+            allInfo={allInfo}
             setAllInfo={setAllInfo}
           />
         </Route>

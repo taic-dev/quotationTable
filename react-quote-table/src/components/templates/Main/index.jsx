@@ -4,11 +4,13 @@ import MainQuoteTable from "../../organisms/MainQuoteTable";
 import SidebarWrapper from "../../organisms/SidebarWrapper";
 import MainLeft from "../../molecules/MainLeft";
 import MainRight from "../../molecules/MainRight";
+import SidebarPreviewLeft from "../../molecules/SidebarPreviewLeft";
+import SidebarPreviewRight from "../../molecules/SidebarPreviewRight";
 import Headline from "../../atoms/Headline";
 import { uuid } from "../../../utils/uuid";
 import styles from "./index.module.css";
 
-const Main = ({ setAllInfo }) => {
+const Main = ({ allInfo, setAllInfo }) => {
   const [detailInfo, setDetailInfo] = useState({
     company: "",
     postalCode: "",
@@ -50,6 +52,8 @@ const Main = ({ setAllInfo }) => {
     setAllInfo([detailInfo, allTableRow, { totalPrice: totalPrice }]);
   }, [allTableRow, detailInfo]);
 
+  if(allInfo.length === 0) return <p>loading...</p>
+
   return (
     <div className={styles.wrapper}>
       <main className={styles.main}>
@@ -75,7 +79,10 @@ const Main = ({ setAllInfo }) => {
         >
           お見積書
         </Headline>
-        <SidebarWrapper />
+        <SidebarWrapper>
+          <SidebarPreviewLeft allInfo={allInfo} totalPrice={totalPrice} />
+          <SidebarPreviewRight allInfo={allInfo} />
+        </SidebarWrapper>
       </div>
     </div>
   );

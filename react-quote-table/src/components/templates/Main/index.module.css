@@ -9,8 +9,9 @@
 
 .sidebar {
   width: 55%;
+  height: fit-content;
   margin-left: 15px;
-  padding: 1rem;
+  padding: 30px;
   box-shadow: 1px 1px 6px #ccc;
   background: #fff;
 }

@@ -1,0 +1,74 @@
+p{
+  margin: 0;
+}
+
+.preview-left {
+  width: 45%;
+  font-size: 13px;
+  font-family: "Nasu-Regular";
+  padding-right: 20px;
+}
+
+.preview-company {
+  display: flex;
+}
+
+.preview-company p{
+  position: relative;
+  width: 100%;
+  height: 24px;
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: 2px solid #4169e1;
+}
+
+.preview-company p::after{
+  position: absolute;
+  right: -30px;
+  content: "御中";
+  font-size: 13px;
+  font-weight: normal;
+}
+
+.preview-address{
+  height: 40px;
+}
+
+.preview-subject {
+  margin-top: 20px;
+}
+
+.preview-subject p{
+  height: 24px;
+  font-size: 15px;
+  font-weight: bold;
+  border-bottom: 2px solid #4169e1;
+}
+
+.preview-quote > p{
+  margin: 15px 0;
+}
+
+.preview-total-price{
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #4169e1;
+}
+
+.preview-total-price p:first-child{
+  padding: 5px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: bold;
+  background: #4169e1;
+}
+
+.preview-total-price p:last-child{
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.preview-margin-top{
+  margin-top: 15px;
+}
