@@ -19,10 +19,10 @@ const MainTableBody = ({ allTableRow, setAllTableRow }) => {
 
   return (
     <TableBody>
-      {allTableRow.map((value) => {
+      {allTableRow.map((value,i) => {
         return (
-          <TableRow key={value.id} id={value.id}>
-            <TableCell>{value.id + 1}</TableCell>
+          <TableRow key={value.uuid} id={i}>
+            <TableCell>{i+1}</TableCell>
             <TableCell>
               <TextField
                 options={[

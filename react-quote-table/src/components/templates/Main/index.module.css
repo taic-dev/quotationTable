@@ -1,3 +1,25 @@
-.main{
-    margin: 100px 0;
+.wrapper {
+  display: flex;
+  gap: 60px;
+  margin: 100px 15px;
+}
+
+.main {
+  width: 45%;
+}
+
+.sidebar {
+  width: 55%;
+  height: fit-content;
+  margin-left: 15px;
+  padding: 30px;
+  box-shadow: 1px 1px 6px #ccc;
+  background: #fff;
+}
+
+@media screen and (min-width:1400px) {
+  .wrapper{
+    max-width: 1400px;
+    margin: 100px auto;
+  }
 }

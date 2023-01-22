@@ -1,0 +1,20 @@
+thead.table-head {
+  color: #fff;
+  background: #4169e1;
+}
+
+thead.table-head tr {
+  height: 30px;
+}
+
+thead.table-head th {
+  padding-left: 10px;
+}
+
+thead th.table-head-no {
+  width: 40px;
+}
+
+thead th.table-head-quantity {
+  width: 50px;
+}

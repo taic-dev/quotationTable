@@ -7,14 +7,13 @@ import Pdf from "../../templates/Pdf";
 const Page = () => {
   const [allInfo, setAllInfo] = useState([]);
 
-  console.log(allInfo)
-
   return (
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
           <Header />
           <Main
+            allInfo={allInfo}
             setAllInfo={setAllInfo}
           />
         </Route>

@@ -6,7 +6,7 @@ const index = ({ allTableRow, setAllTableRow }) => {
   // 行の削除
   const deleteTableRow = (e) => {
     const parentId = e.target.closest("tr").id;
-    setAllTableRow(allTableRow.filter((row) => row.id != parentId));
+    setAllTableRow(allTableRow.filter((row,i) => i != parentId));
   };
 
   return allTableRow.length !== 1 ? <DoNotDisturbOnIcon onClick={(e) => deleteTableRow(e)} /> : <BlockIcon /> ;

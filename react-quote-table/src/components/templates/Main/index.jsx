@@ -1,14 +1,17 @@
 import { useEffect, useState } from "react";
 import MainWrapper from "../../organisms/MainWrapper";
 import MainQuoteTable from "../../organisms/MainQuoteTable";
+import SidebarWrapper from "../../organisms/SidebarWrapper";
 import MainLeft from "../../molecules/MainLeft";
 import MainRight from "../../molecules/MainRight";
+import SidebarPreviewLeft from "../../molecules/SidebarPreviewLeft";
+import SidebarPreviewRight from "../../molecules/SidebarPreviewRight";
+import SidebarQuoteTable from "../../organisms/SidebarQuoteTable";
+import Headline from "../../atoms/Headline";
 import { uuid } from "../../../utils/uuid";
-import { Typography } from "@mui/material";
-import { Container } from "@mui/system";
 import styles from "./index.module.css";
 
-const Main = ({ setAllInfo }) => {
+const Main = ({ allInfo, setAllInfo }) => {
   const [detailInfo, setDetailInfo] = useState({
     company: "",
     postalCode: "",
@@ -50,16 +53,12 @@ const Main = ({ setAllInfo }) => {
     setAllInfo([detailInfo, allTableRow, { totalPrice: totalPrice }]);
   }, [allTableRow, detailInfo]);
 
+  if(allInfo.length === 0) return <p>loading...</p>
+
   return (
-    <Container>
+    <div className={styles.wrapper}>
       <main className={styles.main}>
-        <Typography
-          style={{ fontSize: "25px", textAlign: "center" }}
-          component="h2"
-          variant="h2"
-        >
-          お見積書
-        </Typography>
+        <Headline>見積書</Headline>
         <MainWrapper>
           <MainLeft detailInfo={detailInfo} setDetailInfo={setDetailInfo} />
           <MainRight detailInfo={detailInfo} setDetailInfo={setDetailInfo} />
@@ -70,7 +69,24 @@ const Main = ({ setAllInfo }) => {
           setAllTableRow={setAllTableRow}
         />
       </main>
-    </Container>
+      <div className={styles.sidebar}>
+        <Headline
+          color={{
+            color: "#fff",
+            background: "#4169e1",
+            fontWeight: "bold",
+            padding: "5px 0",
+          }}
+        >
+          お見積書
+        </Headline>
+        <SidebarWrapper>
+          <SidebarPreviewLeft allInfo={allInfo} totalPrice={totalPrice} />
+          <SidebarPreviewRight allInfo={allInfo} />
+        </SidebarWrapper>
+        <SidebarQuoteTable allTableRow={allTableRow} />
+      </div>
+    </div>
   );
 };
 
