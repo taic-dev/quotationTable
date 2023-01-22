@@ -45,6 +45,8 @@ const Main = ({ allInfo, setAllInfo }) => {
 
   const [totalPrice, setTotalPrice] = useState(0);
 
+  const [remarks, setRemarks] = useState("");
+
   useEffect(() => {
     setTotalPrice(
       allTableRow.reduce((sum, row) => {
@@ -52,8 +54,8 @@ const Main = ({ allInfo, setAllInfo }) => {
       }, 0)
     );
 
-    setAllInfo([detailInfo, allTableRow, { totalPrice: totalPrice }]);
-  }, [allTableRow, detailInfo]);
+    setAllInfo([detailInfo, allTableRow, { totalPrice: totalPrice }, remarks]);
+  }, [allTableRow, detailInfo, remarks]);
 
   if(allInfo.length === 0) return <p>loading...</p>
 
@@ -70,7 +72,7 @@ const Main = ({ allInfo, setAllInfo }) => {
           allTableRow={allTableRow}
           setAllTableRow={setAllTableRow}
         />
-        <MainRemarks />
+        <MainRemarks setRemarks={setRemarks} />
       </main>
       <div className={styles.sidebar}>
         <Headline
@@ -88,7 +90,7 @@ const Main = ({ allInfo, setAllInfo }) => {
           <SidebarPreviewRight allInfo={allInfo} />
         </SidebarWrapper>
         <SidebarQuoteTable allTableRow={allTableRow} />
-        <SidebarRemarks />
+        <SidebarRemarks remarks={remarks} />
       </div>
     </div>
   );
