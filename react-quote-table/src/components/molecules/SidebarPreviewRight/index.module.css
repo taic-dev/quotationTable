@@ -1,0 +1,28 @@
+p {
+  margin: 0;
+}
+
+.preview-right{
+  width: 40%;
+  padding: 0 50px;
+  font-size: 13px;
+}
+
+.preview-own-no p{
+  margin-bottom: 15px;
+}
+
+.preview-own-company-info p{
+  margin-top: 15px;
+}
+
+.preview-oen-company-name{
+  height: 24px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.preview-own-company-info .preview-oen-company-address{
+  height: 40px;
+  margin-top: 0;
+}

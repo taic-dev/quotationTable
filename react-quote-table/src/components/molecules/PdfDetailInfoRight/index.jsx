@@ -7,8 +7,8 @@ const index = ({ allInfo }) => {
   return (
     <View style={styles.detailRight}>
       <View>
-        <Text style={styles.detailTextSmall}>No:{allInfo[0].no}</Text>
-        <Text style={styles.detailTextSmall}>見積日:{allInfo[0].quoteDate}</Text>
+        <Text style={styles.detailTextSmall}>No: {allInfo[0].no}</Text>
+        <Text style={styles.detailTextSmall}>見積日: {allInfo[0].quoteDate}</Text>
       </View>
       <View style={styles.detailOwnCompanyInfo}>
         <Text style={styles.detailTextMiddle}>{allInfo[0].ownCompany}</Text>
