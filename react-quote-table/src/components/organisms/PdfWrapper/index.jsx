@@ -3,6 +3,7 @@ import PdfDetailInfoLeft from "../../molecules/PdfDetailInfoLeft";
 import PdfDetailInfoRight from "../../molecules/PdfDetailInfoRight";
 import PdfTableHead from "../../molecules/PdfTableHead";
 import PdfTableRow from "../../molecules/PdfTableRow";
+import PdfRemarks from "../../atoms/PdfRemarks";
 import { View, Text } from "@react-pdf/renderer";
 import styles from "./styles";
 
@@ -22,6 +23,9 @@ const index = ({ allInfo }) => {
         {allInfo[1].map((value, i) => {
           return <PdfTableRow value={value} i={i} key={value.uuid} />;
         })}
+      </View>
+      <View style={styles.remarks}>
+        <PdfRemarks allInfo={allInfo} />
       </View>
     </View>
   );

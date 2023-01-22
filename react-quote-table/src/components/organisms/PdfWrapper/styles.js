@@ -20,6 +20,15 @@ const styles = {
     margin: "30px 0",
     flexDirection: "row",
   },
+  remarks: {
+    fontFamily: "Nasu-Regular",
+    minHeight: "100px",
+    border: "1px solid #4169e1",
+    borderRadius: "5px",
+    marginTop: "30px",
+    padding: "10px",
+    fontSize: "10px",
+  }
 };
 
 export default styles;
