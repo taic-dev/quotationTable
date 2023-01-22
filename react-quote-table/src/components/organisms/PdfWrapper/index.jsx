@@ -7,6 +7,9 @@ import { View, Text } from "@react-pdf/renderer";
 import styles from "./styles";
 
 const index = ({ allInfo }) => {
+
+  if(allInfo.length === 0) return <p>loading...</p>
+
   return (
     <View style={styles.wrapper}>
       <Text style={styles.title}>お見積書</Text>
@@ -16,8 +19,8 @@ const index = ({ allInfo }) => {
       </View>
       <View>
         <PdfTableHead />
-        {allInfo[1].map((value) => {
-          return <PdfTableRow value={value} key={value.uuid} />;
+        {allInfo[1].map((value, i) => {
+          return <PdfTableRow value={value} i={i} key={value.uuid} />;
         })}
       </View>
     </View>

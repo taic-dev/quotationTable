@@ -1,0 +1,9 @@
+.table-row {
+  height: 30px;
+}
+
+.table-row td {
+  padding-left: 10px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #4169e1;
+}

@@ -7,8 +7,6 @@ import Pdf from "../../templates/Pdf";
 const Page = () => {
   const [allInfo, setAllInfo] = useState([]);
 
-  console.log(allInfo)
-
   return (
     <BrowserRouter>
       <Switch>

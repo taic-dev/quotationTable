@@ -6,6 +6,7 @@ import MainLeft from "../../molecules/MainLeft";
 import MainRight from "../../molecules/MainRight";
 import SidebarPreviewLeft from "../../molecules/SidebarPreviewLeft";
 import SidebarPreviewRight from "../../molecules/SidebarPreviewRight";
+import SidebarQuoteTable from "../../organisms/SidebarQuoteTable";
 import Headline from "../../atoms/Headline";
 import { uuid } from "../../../utils/uuid";
 import styles from "./index.module.css";
@@ -83,6 +84,7 @@ const Main = ({ allInfo, setAllInfo }) => {
           <SidebarPreviewLeft allInfo={allInfo} totalPrice={totalPrice} />
           <SidebarPreviewRight allInfo={allInfo} />
         </SidebarWrapper>
+        <SidebarQuoteTable allTableRow={allTableRow} />
       </div>
     </div>
   );

@@ -20,6 +20,7 @@ Font.register({
 });
 
 const index = ({ allInfo, totalPrice }) => {
+
   return (
     <PDFViewer style={styles.viewer}>
       <Document>

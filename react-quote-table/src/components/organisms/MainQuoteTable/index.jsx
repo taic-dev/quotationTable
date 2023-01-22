@@ -1,6 +1,6 @@
 import React from "react";
-import MainTableHead from "../MainTableHead";
-import MainTableBody from "../MainTableBody";
+import MainTableHead from "../../molecules/MainTableHead";
+import MainTableBody from "../../molecules/MainTableBody";
 import TextField from "../../atoms/TextFileld";
 import AddButton from "../../atoms/AddButton";
 import { Table } from "@mui/material";
