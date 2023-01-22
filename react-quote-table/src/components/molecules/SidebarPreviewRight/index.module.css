@@ -8,8 +8,22 @@ p {
   font-size: 13px;
 }
 
+.preview-own-no{
+  position: relative;
+}
+
 .preview-own-no p{
   margin-bottom: 15px;
+}
+
+.preview-stamp-img{
+  position: absolute;
+  top: -40px;
+  right: -50px;
+  
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
 }
 
 .preview-own-company-info p{

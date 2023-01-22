@@ -20,7 +20,7 @@ const Main = ({ allInfo, setAllInfo }) => {
     address: "",
     rep: "",
     subject: "",
-    dueDate: "",
+    stampImg: "",
     no: "",
     quoteDate: "",
     ownCompany: "",

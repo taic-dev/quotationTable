@@ -5,6 +5,7 @@ const index = ({ allInfo }) => {
   return (
     <div className={styles["preview-right"]}>
       <div className={styles["preview-own-no"]}>
+        <img className={styles["preview-stamp-img"]} src={allInfo[0].stampImg} alt="判子画像" />
         <p>No: {allInfo[0].no}</p>
         <p>見積日: {allInfo[0].quoteDate}</p>
       </div>

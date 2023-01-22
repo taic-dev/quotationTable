@@ -17,7 +17,7 @@ const index = ({ detailInfo, setDetailInfo }) => {
       <TextField options={[{ labelName: "住所", fullWidth: true, name: "address", onChange: (e)=>changeDetailInfo(e) }]} />
       <TextField options={[{ labelName: "ご担当者", text: "様", name: "rep", onChange: (e)=>changeDetailInfo(e) }]} />
       <TextField options={[{ labelName: "件名", fullWidth: true, name: "subject", onChange: (e)=>changeDetailInfo(e) }]} />
-      <StampImg />
+      <StampImg detailInfo={detailInfo} setDetailInfo={setDetailInfo} />
     </MainField>
   );
 };
