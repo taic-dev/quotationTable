@@ -1,12 +1,13 @@
 import React from "react";
-import { View, Text } from "@react-pdf/renderer";
+import { View, Text, Image, } from "@react-pdf/renderer";
 import styles from "./styles";
 
 const index = ({ allInfo }) => {
   console.log(allInfo[2])
   return (
     <View style={styles.detailRight}>
-      <View>
+      <View style={styles.detailNo}>
+        <Image style={styles.detailStampImg} src={ allInfo[0].stampImg ? allInfo[0].stampImg : `${process.env.PUBLIC_URL}/img/no_image.png`} alt="判子画像" />
         <Text style={styles.detailTextSmall}>No: {allInfo[0].no}</Text>
         <Text style={styles.detailTextSmall}>見積日: {allInfo[0].quoteDate}</Text>
       </View>
