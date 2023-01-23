@@ -5,6 +5,16 @@ const styles = {
     fontFamily: "Nasu-Regular",
     paddingRight: "50px",
   },
+  detailNo: {
+    position: "relative",
+  },
+  detailStampImg: {
+    position: "absolute",
+    top: "-15px",
+    right: "0",
+    width: "50px",
+    height: "50px",
+  },
   detailOwnCompanyInfo: {
     marginTop: "5px",
   },

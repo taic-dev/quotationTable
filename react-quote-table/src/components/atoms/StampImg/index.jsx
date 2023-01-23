@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Button from '@mui/material/Button';
 import styles from "./index.module.css"
 const StampImg = ({ detailInfo, setDetailInfo }) => {
   const [image, setImage] = useState("");
@@ -19,8 +20,11 @@ const StampImg = ({ detailInfo, setDetailInfo }) => {
 
   return (
     <div className={styles["stamp-img-wrapper"]}>
-      <img src={image} alt="判子画像" />
-      <input type="file" name="stampImg" onChange={(e)=>changeStampImg(e)} />
+      <img src={image ? image : `${process.env.PUBLIC_URL}/img/no_image.png` } alt="判子画像" />
+      <Button component="label" variant="outlined" sx={{ width: "100%" }}>
+        判子を選択
+        <input type="file" accept="image/*" name="stampImg" onChange={(e)=>changeStampImg(e)} hidden />
+      </Button>
     </div>
   );
 };
