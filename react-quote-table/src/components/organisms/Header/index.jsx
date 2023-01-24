@@ -6,7 +6,7 @@ import PictureAsPdfIcon from "@mui/icons-material/PictureAsPdf";
 const index = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="fixed">
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Link to="/" style={{ color: "#fff" }}>
