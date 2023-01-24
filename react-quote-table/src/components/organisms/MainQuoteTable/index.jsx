@@ -23,7 +23,7 @@ const MainQuoteTable = ({
           },
         ]}
       />
-      <Table sx={{ minWidth: 700 }} aria-label="customized table">
+      <Table aria-label="customized table">
         <MainTableHead />
         <MainTableBody allTableRow={allTableRow} setAllTableRow={setAllTableRow} />
       </Table>
