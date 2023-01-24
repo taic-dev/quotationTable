@@ -2,7 +2,7 @@
 <img src="https://user-images.githubusercontent.com/52269577/214225055-57625f65-d616-4557-b93b-aa39bb0a1e55.png">
 </p>
 
-# サクッとお見積り作成 ~PDF化も楽ちん~
+# サクッとお見積り作成 〜PDF化も楽ちん〜
 ### https://quotation-table.vercel.app/
 
 ## Demo
