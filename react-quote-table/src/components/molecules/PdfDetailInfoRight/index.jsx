@@ -15,7 +15,7 @@ const index = ({ allInfo }) => {
         <Text style={styles.detailTextMiddle}>{allInfo[0].ownCompany}</Text>
         <Text style={styles.detailTextSmall}>&#12306;{allInfo[0].ownPostalCode}</Text>
         <Text style={styles.detailTextSmall}>{allInfo[0].ownAddress}</Text>
-        <Text style={styles.detailTextSmall}>TELL: {allInfo[0].ownPhoneNumber}</Text>
+        <Text style={styles.detailTextSmall}>TEL: {allInfo[0].ownPhoneNumber}</Text>
         <Text style={styles.detailTextSmall}>FAX: {allInfo[0].ownFax}</Text>
         <Text style={styles.detailTextSmall}>Email: {allInfo[0].ownEmail}</Text>
       </View>

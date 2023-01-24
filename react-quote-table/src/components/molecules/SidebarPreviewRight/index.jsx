@@ -13,7 +13,7 @@ const index = ({ allInfo }) => {
         <p className={styles["preview-oen-company-name"]}>{allInfo[0].ownCompany}</p>
         <p>&#12306; {allInfo[0].ownPostalCode}</p>
         <p className={styles["preview-oen-company-address"]}>{allInfo[0].ownAddress}</p>
-        <p>TELL: {allInfo[0].ownPhoneNumber}</p>
+        <p>TEL: {allInfo[0].ownPhoneNumber}</p>
         <p>FAX: {allInfo[0].ownFax}</p>
         <p>Email: {allInfo[0].ownEmail}</p>
         <p>担当: {allInfo[0].ownRep}</p>

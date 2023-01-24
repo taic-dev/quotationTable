@@ -8,9 +8,9 @@ const index = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed">
         <Toolbar>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          <Typography component="div" sx={{ flexGrow: 1, height: "56px" }}>
             <Link to="/" style={{ color: "#fff" }}>
-              お見積書 作成システム
+              <img style={{ width: "95px" }} src={`${process.env.PUBLIC_URL}/img/logo.png`} alt="ロゴ画像"  />
             </Link>
           </Typography>
           <Link to="/pdf">
