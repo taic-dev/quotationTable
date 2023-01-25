@@ -10,6 +10,7 @@ const index = ({ setRemarks }) => {
       <TextareaAutosize
         className={styles.TextareaAutosize}
         placeholder="備考欄"
+        maxLength={150}
         onChange={(e) => changeRemarks(e)}
       />
     </div>

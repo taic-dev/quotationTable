@@ -68,6 +68,8 @@ const Main = ({ allInfo, setAllInfo }) => {
           <MainRight detailInfo={detailInfo} setDetailInfo={setDetailInfo} />
         </MainWrapper>
         <MainQuoteTable
+          detailInfo={detailInfo} 
+          setDetailInfo={setDetailInfo}
           totalPrice={totalPrice}
           allTableRow={allTableRow}
           setAllTableRow={setAllTableRow}

@@ -40,7 +40,6 @@ const MainTableBody = ({ allTableRow, setAllTableRow }) => {
                   {
                     labelName: "単価",
                     defaultValue: "0",
-                    type: "number",
                     name: "unitPrice",
                     onChange: (e) => changeTableCell(e),
                   },
@@ -53,7 +52,6 @@ const MainTableBody = ({ allTableRow, setAllTableRow }) => {
                   {
                     labelName: "数量",
                     defaultValue: "0",
-                    type: "number",
                     name: "quantity",
                     onChange: (e) => changeTableCell(e),
                   },

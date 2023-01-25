@@ -18,6 +18,7 @@ const MainQuoteTable = ({
           {
             text: "円",
             labelName: "合計金額",
+            name: "totalAmount",
             defaultvalue: "0",
             value: totalPrice,
           },
