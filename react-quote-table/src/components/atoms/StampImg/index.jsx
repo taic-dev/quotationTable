@@ -7,6 +7,7 @@ const StampImg = ({ detailInfo, setDetailInfo }) => {
   const changeStampImg = (e) => {
     if (!e.target.files || !e.target.files[0]) return;
     if(!e.target.files?.[0].type.match("image.*")) return;
+    // 拡張子の確認 / アラートでエラーの表示
 
     const { name } = e.target;
     const reader = new FileReader();
@@ -23,8 +24,9 @@ const StampImg = ({ detailInfo, setDetailInfo }) => {
       <img src={image ? image : `${process.env.PUBLIC_URL}/img/no_image.png` } alt="判子画像" />
       <Button component="label" variant="outlined" sx={{ width: "100%" }}>
         判子を選択
-        <input type="file" accept="image/*" name="stampImg" onChange={(e)=>changeStampImg(e)} hidden />
+        <input type="file" accept="png,jpg,jpeg" name="stampImg" onChange={(e)=>changeStampImg(e)} hidden />
       </Button>
+      <p style={{ marginTop: "5px", fontSize: "10px" }}>.png, .jpg, .jpeg のみ対応</p>
     </div>
   );
 };

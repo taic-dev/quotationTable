@@ -1,17 +1,10 @@
 import React from "react";
+import inputProps from "../../../validation/inputProps";
 import { TextField } from "@mui/material";
 import styles from "./index.module.css";
 
-const Index = ({ options, detailInfo, setDetailInfo }) => {
-  const handleChangeTest = () => {
-    console.log("test");
-  }
+const Index = ({ options }) => {
 
-  const changeDetailInfo = (e) =>{
-    const { name, value } = e.target;
-    setDetailInfo({...detailInfo, [name]: value});
-  }
-  
   return (
     <div className={styles["main-textarea"]}>
       <TextField
@@ -23,13 +16,11 @@ const Index = ({ options, detailInfo, setDetailInfo }) => {
         type={options[0].type && options[0].type}
         name={options[0].name && options[0].name}
         fullWidth={options[0].fullWidth && true}
-        onChange={(e)=>{
-          handleChangeTest();
-          options[0].onChange && changeDetailInfo(e);
-        }}
+        inputProps={inputProps[options[0].name] && inputProps[options[0].name] }
+        onChange={options[0].onChange && options[0].onChange}
       />
-      {options[0].text && <span>{options[0].text}</span>}
     </div>
+    
   );
 };
 
