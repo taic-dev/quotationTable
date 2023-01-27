@@ -20,7 +20,7 @@ const index = ({ allTableRow, setAllTableRow }) => {
 
   return (
     <div className={styles["main-button"]}>
-      <Button variant="outlined" onClick={addTableRow}>
+      <Button variant="outlined" onClick={addTableRow} disabled={allTableRow.length >= 10 && true}>
         追加
       </Button>
     </div>
